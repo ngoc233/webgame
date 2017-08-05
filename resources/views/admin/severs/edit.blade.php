@@ -29,7 +29,7 @@
 					<div class="form-group row">
 						<label class="col-sm-2 form-control-label">Name</label>
 						<div class="col-sm-10">
-							<p class="form-control-static"><input type="text" class="form-control" id="inputPassword"  name="name" value="{{$sever->name}}"></p>
+							<p class="form-control-static"><input type="number" class="form-control" id="inputPassword"  name="name" value="{{$sever->name}}"></p>
 						</div>
 					</div>
 					<div class="form-group row">

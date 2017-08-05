@@ -20,7 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="login-form w3_form">
   <!--  Title-->
       <div class="login-title w3_title">
-           <h1>Elegant login Form</h1>
+           <h1>Lạc Trôi</h1>
       </div>
            <div class="login w3_login">
                

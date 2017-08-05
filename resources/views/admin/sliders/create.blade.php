@@ -31,7 +31,9 @@
 						<label class="col-sm-2 form-control-label">Image</label>
 						<div class="col-sm-10">
 							<div class="files-manager-header-left">
-								<input type="file" class="form-control" name="image" >
+								<input id="f" type="file" class="form-control" name="image" onchange="file_change(this)" style="display: none" />
+								<input type="button" value="Chọn ảnh" onclick="document.getElementById('f').click()" />
+								<img id="img" width="841px" height="450px;" style="display: none" />
 							</div>
 						</div>
 					</div>

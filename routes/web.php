@@ -10,11 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',function()
-{
-	return view('user.layouts.index');
-});
-
+Route::get('/','HomeController@index');
+Route::get('cate/{id}','HomeController@content');
+Route::get('post/{id}','HomeController@post');
 Route::group(['prefix' =>'admin','middleware' =>'adminLogin'],function()
 {
 	Route::resource('menu','MenuController');

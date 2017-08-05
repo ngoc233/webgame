@@ -72,5 +72,28 @@
   	</script>
   	<script type="text/javascript" language="javascript" src="{{url('public/admin/ckeditor/ckeditor.js')}}" ></script>
 <script src="{{url('public/admin/js/app.js')}}"></script>
+	<!-- preview image -->
+	<script type="text/javascript">
+
+		function file_change(f){
+
+		    var reader = new FileReader();
+
+		    reader.onload = function (e) {
+
+		        var img = document.getElementById("img");
+
+		        img.src = e.target.result;
+
+		        img.style.display = "inline";
+
+		    };
+
+		    reader.readAsDataURL(f.files[0]);
+
+		}
+
+	</script>
+	<!--/preview image-->
 </body>
 </html>

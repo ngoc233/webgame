@@ -24,7 +24,7 @@
 					<div class="form-group row">
 						<label class="col-sm-2 form-control-label">Name</label>
 						<div class="col-sm-10">
-							<p class="form-control-static"><input  value="{{ old('name') }}" type="text" class="form-control" id="inputPassword" name="name" placeholder="Name"></p>
+							<p class="form-control-static"><input  value="{{ old('name') }}" type="number" class="form-control" id="inputPassword" name="name" placeholder="Name"></p>
 						</div>
 					</div>
 					<div class="form-group row">
