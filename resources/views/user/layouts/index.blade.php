@@ -161,7 +161,23 @@
             }
         </script>
         <!--/ajaxcategory -->
-
+        <!-- ajaxpost -->
+        <script type="text/javascript">
+            function ajax_post(id)
+            {
+                $.ajax({
+                        url : "post/"+id,
+                        type : "get",
+                        data : {
+                        },
+                        dataType:"text",
+                        success : function (result){
+                            $('#content').html(result);
+                        }
+                    });   
+            }
+        </script>
+        <!--/ajaxpost -->
     </body>
 </html>
 
