@@ -57,7 +57,9 @@
                     <!--/menu-->
                     <hr>
                     <!-- content-->
+                    <div id="content">
                     @yield('content')
+                    </div>
                     <!--/content-->
                     
                     </div>
@@ -71,7 +73,6 @@
         <!-- footer-->
         @include('user.layouts.footer')
         <!--/footer-->
-
         <!-- notificate-->
         <!--/notificate-->
         <!-- Add your site or application content here -->
@@ -129,19 +130,38 @@
         <!-- ajaxcategory -->
         <script type="text/javascript">
             function ajax_category(id){
-                $.ajax({
-                    url : "cate/"+id,
-                    type : "get",
-                    data : {
-                    },
-                    dataType:"text",
-                    success : function (result){
-                        $('#content').html(result);
-                    }
-                });
+                var demo = window.location.href ;
+                var a    = demo.search("p=");
+                if (a != 0)
+                {
+                    $.ajax({
+                        url : id,
+                        type : "get",
+                        data : {
+                        },
+                        dataType:"text",
+                        success : function (result){
+                            $('#content').html(result);
+                        }
+                    });
+                }
+                else
+                {
+                    $.ajax({
+                        url : "cate/"+id,
+                        type : "get",
+                        data : {
+                        },
+                        dataType:"text",
+                        success : function (result){
+                            $('#content').html(result);
+                        }
+                    });
+                }
             }
         </script>
         <!--/ajaxcategory -->
+
     </body>
 </html>
 

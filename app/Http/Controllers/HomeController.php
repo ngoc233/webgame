@@ -10,6 +10,7 @@ use App\Menu;
 use App\Slider;
 use App\Sever;
 use DB;
+use Route;
 class HomeController extends Controller
 {
     /**
@@ -40,11 +41,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   
     public function content($id)
     {
-
+        if (isset($_GET['p']))
+        {
+            $posts = DB::table('posts')->where('cate_id','=',$id)->orderBy('id','desc')->paginate(5,['*'],'p',$page=null);
+        return view('user.content_pagination',['posts'=>$posts,'id'=>$id]);
+        }
+        else
+        {
         $posts = DB::table('posts')->where('cate_id','=',$id)->orderBy('id','desc')->paginate(5,['*'],'p',$page=null);
-        return view('user.content',['posts'=>$posts]);
+        return view('user.content',['posts'=>$posts,'id'=>$id]);
+        }
     }
     public function post($id)
     {

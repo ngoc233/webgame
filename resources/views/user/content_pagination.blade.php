@@ -1,3 +1,5 @@
+@extends('user.layouts.index')
+@section('content')
 <ul id="list">
         @foreach($posts as $post)
         <li id="item">
@@ -25,4 +27,4 @@
         {{$posts->links()}}
     </div>
         <!--/page-nav-->
-       
+@endsection

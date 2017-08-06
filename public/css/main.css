@@ -572,6 +572,14 @@ hr
     margin-right: 10px;
     background-color: black;
 }
+button
+{
+    border: none;
+    background: none;
+    color: #4080ff;
+    font-size: 14px;
+    font-weight: bold;
+}
 #button-big ul
 {
     padding: 0px;
