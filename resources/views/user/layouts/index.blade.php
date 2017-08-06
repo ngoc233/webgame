@@ -132,7 +132,7 @@
             function ajax_category(id){
                 var demo = window.location.href ;
                 var a    = demo.search("p=");
-                if (a != 0)
+                if (a > 0)
                 {
                     $.ajax({
                         url : id,
@@ -178,6 +178,49 @@
             }
         </script>
         <!--/ajaxpost -->
+
+        <!--ajaxsever -->
+        <script>
+            $(document).on('click','.pagination a',function(e)
+            {
+                e.stopPropagation();
+                e.preventDefault();
+                var ngoc  = $(this).attr('href');
+                var demo  = ngoc.search("p=");
+                var server= ngoc.search("page=");
+                if (demo >0)
+                {
+                    var slice = ngoc.slice(30,35);
+                    $.ajax(
+                    {
+                        url : "cate/"+slice,
+                        type: "get",
+                        data:{},
+                        dataType:"text",
+                        success : function (data){
+                            $('#content').html(data);
+                        }
+                    });
+                }
+                if (server>0)
+                {
+
+                    var slice = ngoc.slice(24,31);
+                    $.ajax(
+                    {
+                        url :slice,
+                        type: "get",
+                        data:{},
+                        dataType:"text",
+                        success : function (data){
+                            $('#content').html(data);
+                        }
+                    });
+                }
+
+            });
+        </script>
+            <!--/ajaxserver -->
     </body>
 </html>
 

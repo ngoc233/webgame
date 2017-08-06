@@ -1,5 +1,4 @@
-@extends('user.layouts.index')
-@section('content')
+
 <ul id="list">
         @foreach($posts as $post)
         <li id="item">
@@ -10,11 +9,11 @@
                     </span>
                 </div>
                 <div class="col-md-8 col-xs-8 col-lg-8 col-md-8">
-                    <a style="text-decoration: none;" href="{{url('post/'.$post->id)}}">
+                    <button onclick="ajax_post({{$post->id}})">
                         <h4 id="title">
                         {{$post->title}}
                         </h4>
-                    </a>
+                    </button>
                     <p>{{$post->description}}</p>
                     <div class="col-md-8 col-xs-8 col-lg-8 col-md-8">
             </div>
@@ -27,4 +26,3 @@
         {{$posts->links()}}
     </div>
         <!--/page-nav-->
-@endsection
