@@ -145,7 +145,7 @@
                         }
                     });
                 }
-                else
+                if(a == -1)
                 {
                     $.ajax({
                         url : "cate/"+id,
