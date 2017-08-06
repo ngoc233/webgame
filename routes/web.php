@@ -25,3 +25,5 @@ Route::group(['prefix' =>'admin','middleware' =>'adminLogin'],function()
 Route::get('admin/login','LoginController@getLogin');
 Route::post('admin/login','LoginController@postLogin');
 Route::get('admin/logout','LoginController@logout');
+Route::get('facebook', 'SocialController@redirectToProvider');
+Route::get('facebook/callback', 'SocialController@handleProviderCallback');

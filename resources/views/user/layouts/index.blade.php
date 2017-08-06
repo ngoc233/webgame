@@ -71,7 +71,6 @@
         </section>
 
         <!-- footer-->
-        @include('user.layouts.footer')
         <!--/footer-->
         <!-- notificate-->
         <!--/notificate-->
@@ -205,17 +204,7 @@
                 if (server>0)
                 {
 
-                    var slice = ngoc.slice(24,31);
-                    $.ajax(
-                    {
-                        url :slice,
-                        type: "get",
-                        data:{},
-                        dataType:"text",
-                        success : function (data){
-                            $('#content').html(data);
-                        }
-                    });
+                    alert('ok');
                 }
 
             });

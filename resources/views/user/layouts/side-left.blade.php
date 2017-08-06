@@ -32,6 +32,8 @@
                                         <input class="form-control" type="email" name="email" placeholder="email">
                                         <br>
                                         <button type="submit" class="btn btn-default">Signup</button>
+                                        <a href="{{ URL::to('facebook') }}">Facebook Login</a>
+
                                     </form>
                                 <!--/modal-form-->
                                         <div class="modal-footer">
